@@ -4,7 +4,7 @@ subtitle: Donde encontrarnos
 menu:
   main:
     name: Mapa
-    weight: 4
+    weight: 3
     identifier: menu
     parent: menu
 layout: page

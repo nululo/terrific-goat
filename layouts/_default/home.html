@@ -1,5 +1,25 @@
 {{ define "content" }}
-
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#efefef",
+      "text": "#404040"
+    },
+    "button": {
+      "background": "#8ec760",
+      "text": "#ffffff"
+    }
+  },
+  "theme": "edgeless",
+  "content": {
+    "message": "Esta pagina utiliza cookies para saber más información sobre el usuario y proporcionar una mejor experiencia web. ",
+    "dismiss": "Acepto",
+    "link": "Saber más"
+  }
+});
+</script>
     {{ range $section := .Params.sections }}
         {{ $include_dict := dict "section" $section "Site" $.Site }}
         {{ partial $section.component $include_dict }}
